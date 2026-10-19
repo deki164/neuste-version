@@ -1,0 +1,8 @@
+{
+  "name": "aschenarena",
+  "version": "2.0.0",
+  "description": "Aschenarena – Spiel und Online-Server (1v1 und 2v2, bis 4 Spieler pro Raum)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

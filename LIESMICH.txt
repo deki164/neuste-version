@@ -1,0 +1,39 @@
+ASCHENARENA – ONLINE-MULTIPLAYER (1 gegen 1 und 2 gegen 2)
+=========================================================
+
+Inhalt
+  server.js            Server für Render: liefert das Spiel aus und verbindet die Spieler (bis 4 pro Raum)
+  package.json         Startbefehl: node server.js (keine zusätzlichen Pakete nötig)
+  public/index.html    das Spiel (neueste Version)
+  public/relay.js      Verbindung zum Server
+  public/models/       3D-Modelle und Effekte
+
+Dein Ordner public/art/ mit den Champion-Bildern bleibt so, wie er ist (ist hier nicht dabei).
+
+
+1) Auf GitHub hochladen (dein Repo, das Render benutzt)
+   - server.js und package.json ersetzen
+   - public/index.html und public/relay.js ersetzen
+   - den Ordner public/models/ hochladen (vorhandene Dateien ersetzen)
+   - public/art/ NICHT löschen
+   - unten auf „Commit changes“ klicken
+
+2) Render
+   - Render baut nach dem Commit automatisch neu (dauert 1–3 Minuten).
+   - Falls nicht: im Render-Dashboard beim Dienst „Manual Deploy“ → „Deploy latest commit“.
+   - Startbefehl bleibt: node server.js
+   - Test im Browser: https://neue-aschenarena-2.onrender.com/health  → zeigt „ok …“
+     (Der kostenlose Server schläft nach einer Pause ein und braucht dann bis zu 1 Minute zum Aufwachen.)
+
+3) Exe aktualisieren (bei allen Mitspielern!)
+   - public/index.html  →  Spiel\resources\app\game\index.html
+   - public/models/*.js →  Spiel\resources\app\game\models\
+   - server.txt neben Aschenarena.exe bleibt gleich (Render-Adresse)
+   Alle Spieler brauchen dieselbe Version, sonst klappt das Online-Spiel nicht.
+
+4) Spielen
+   - „Online spielen“ → Modus „1 gegen 1“ oder „2 gegen 2“ → „Raum erstellen“
+   - Den Raumcode an die Freunde schicken, sie geben ihn bei „Beitreten“ ein
+   - 2 gegen 2: Wer beitritt, kommt erst ins Gegner-Team und kann mit „Team wechseln“ zu dir.
+     „Match starten“ startet sofort, leere Plätze spielen Bots. Mit 4 Spielern startet es automatisch.
+   - Im Browser geht es auch ohne Exe: einfach die Render-Adresse öffnen.
